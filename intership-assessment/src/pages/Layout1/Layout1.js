@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import "react-datepicker/dist/react-datepicker.css";
 import { toast } from 'react-hot-toast';
+import dateFormat from "dateformat";
 import './Layout1.css'
+import { useNavigate } from 'react-router-dom';
 
 const Layout1 = () => {
 const [fieldInfo, setFieldInfo] = useState([]);
+const navigate = useNavigate();
 
  useEffect( ()=> {
     fetch('fieldInfo.json')
@@ -17,17 +20,19 @@ const [fieldInfo, setFieldInfo] = useState([]);
    event.preventDefault();
    const form = event.target;
    const fullName = form.fullName.value;
-   const BOD = form.bod.value;
+   const date = form.bod.value;
    const email = form.email.value;
    const phone = form.phone.value;
-
+   
+   const BOD = dateFormat(date, 'paddedShortDate')
   const userInfo ={
     fullName,
     BOD,
     email,
     phone
   }
-
+  
+  console.log(userInfo)
   fetch('http://localhost:5000/users-info',{
     method: 'POST',
     headers:{
@@ -41,6 +46,7 @@ const [fieldInfo, setFieldInfo] = useState([]);
       if(data.acknowledged){
           toast.success('Successfully added user Information');
           event.target.reset();
+          navigate('/layout2')
       }
   })
   .catch(e=> console.log(e));
