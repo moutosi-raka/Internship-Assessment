@@ -9,7 +9,7 @@ const Layout2 = () => {
     .then(data => setUsers(data))
   },[])
     return (
-        <div className="overflow-x-auto my-12 ">
+        <div className="overflow-x-auto my-12 w-10/12 mx-auto">
   <table className="table w-full">
     
     <thead>

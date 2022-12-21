@@ -6,7 +6,7 @@ const Skills = () => {
     const skills =["HTML5", "CSS3", "Tailwind CSS", "Bootstrap", "React js", "Node js", "Express js", "MongoDB", "Firebase Authentication", "Git", "Github"]
     return (
         <div className='py-5 px-4'>
-            <h1 className='text-2xl lg:text-xl text-center font-semibold mb-3 '>My Skills</h1>
+            <h1 className='text-2xl lg:text-xl text-center font-bold mb-5 '>My Skills</h1>
            <ul className='flex flex-wrap lg:block skills'>
             {
                skills.map((skill, i)=> 
