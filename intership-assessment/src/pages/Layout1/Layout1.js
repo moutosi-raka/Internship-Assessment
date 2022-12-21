@@ -48,7 +48,7 @@ const [fieldInfo, setFieldInfo] = useState([]);
  }
 
     return (
-        <div className='w-11/12 mx-auto mt-12'>
+        <div className='w-11/12 mx-auto mt-12 h-[74vh]'>
            <form onSubmit={handleForm} className='w-3/2'>
                 {
                     fieldInfo.map(info => 

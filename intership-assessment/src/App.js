@@ -8,7 +8,7 @@ import { router } from './Routes/Routes';
 function App() {
   const {theme} = useContext(ThemeContext);
   return (
-     <div className='h-screen' id={theme}>
+     <div className='h-full' id={theme}>
       <RouterProvider router={router}>
 
       </RouterProvider>
