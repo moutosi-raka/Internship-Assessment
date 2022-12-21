@@ -8,10 +8,11 @@ const Layout2 = () => {
     
     <thead>
       <tr>
-        <th>#</th>
+        <th>Id</th>
         <th>Name</th>
         <th>BOD</th>
         <th>Email</th>
+        <th>Phone Number</th>
       </tr>
     </thead>
     <tbody>
@@ -21,15 +22,9 @@ const Layout2 = () => {
         <td>Cy Ganderton</td>
         <td>Quality Control Specialist</td>
         <td>Blue</td>
+        <td>Blue</td>
       </tr>
      
-      <tr>
-        <th>2</th>
-        <td>Hart Hagerty</td>
-        <td>Desktop Support Technician</td>
-        <td>Purple</td>
-      </tr>
-
     </tbody>
   </table>
 </div>

@@ -11,7 +11,6 @@ app.use(express.json());
 
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.dtu3pyw.mongodb.net/?retryWrites=true&w=majority`;
-console.log(uri)
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 
@@ -23,6 +22,13 @@ async function run(){
       const user = req.body;
       const result = await usersCollection.insertOne(user);
       res.send(result);
+   });
+
+   app.get('/users', async(req, res)=>{
+    const query = {};
+    const cursor = usersCollection.find(query);
+    const users =  await cursor.toArray();
+    res.send(users)
    })
   }
   finally{}
