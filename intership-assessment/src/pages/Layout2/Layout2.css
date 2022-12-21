@@ -1,0 +1,18 @@
+thead th{
+    border-radius: 0!important;
+   
+}
+
+th, tr, td{
+    border: 1px solid #80808036; 
+}
+.table :where(thead, tfoot) :where(th, td) {
+    color: #8A92A6;;
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    text-transform: capitalize!important;
+}
+.table-color{
+    color: #8A92A6;
+}
