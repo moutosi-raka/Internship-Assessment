@@ -1,9 +1,9 @@
-thead th{
+/* thead th, tr{
     border-radius: 0!important;
    
-}
+} */
 
-th, tr, td{
+ td{
     border: 1px solid #80808036; 
 }
 .table :where(thead, tfoot) :where(th, td) {

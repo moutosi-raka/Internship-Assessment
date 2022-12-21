@@ -1,7 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Layout2.css'
 
 const Layout2 = () => {
+  const [users, setUsers] = useState([]);
+  useEffect( ()=>{
+    fetch('http://localhost:5000/users')
+    .then(res => res.json())
+    .then(data => setUsers(data))
+  },[])
     return (
         <div className="overflow-x-auto my-12">
   <table className="table w-full">
@@ -17,13 +23,16 @@ const Layout2 = () => {
     </thead>
     <tbody>
   
-      <tr>
-        <th className='table-color'>1</th>
-        <td>Cy Ganderton</td>
-        <td>Quality Control Specialist</td>
-        <td>Blue</td>
-        <td>Blue</td>
-      </tr>
+      {
+        users.map((user,i) => 
+          <tr key={user._id}>
+          <th className='table-color'>{i+1}</th>
+          <td>{user.fullName}</td>
+          <td>{user.BOD}</td>
+          <td>{user.email}</td>
+          <td>{user.phone}</td>
+        </tr>)
+      }
      
     </tbody>
   </table>

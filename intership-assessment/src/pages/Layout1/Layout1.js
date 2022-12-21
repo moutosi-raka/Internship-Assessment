@@ -55,7 +55,7 @@ const [fieldInfo, setFieldInfo] = useState([]);
                     <div key={info.id} className='block md:flex mb-5'>
                     <label className='text md:w-1/4 '>{info.lable}</label>
                     <input type={info.tpye} name={info.name} 
-                    required className='w-full md:w-2/5 h-[1.6rem] bg-[#D9D9D9] p-3 outline-none' />
+                    required className='w-full md:w-2/5 h-[1.6rem] bg-[#D9D9D9] p-3 outline-none text-black' />
                 </div>)
                 }
                 <div className='w-[90%] lg:w-[65%] flex 
