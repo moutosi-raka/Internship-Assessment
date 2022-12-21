@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "lable": "Full Name :",
+        "name": "fullName",
+        "tpye": "text"
+    },
+    {
+        "id": 2,
+        "lable": "Date Of Birth :",
+        "name": "bod",
+        "tpye": "date"
+    },
+    {
+        "id": 3,
+        "lable": "Email :",
+        "name": "email",
+        "tpye": "text"
+    },
+    {
+        "id": 4,
+        "lable": "Phone Number :",
+        "name": "phone",
+        "tpye": "text"
+    }
+]
