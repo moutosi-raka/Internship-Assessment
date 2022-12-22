@@ -14,8 +14,8 @@ const Layout2 = () => {
     
     <thead>
       <tr>
-        <th>Id</th>
-        <th>Name</th>
+        <th>ID</th>
+        <th>Full Name</th>
         <th>DOB</th>
         <th>Email</th>
         <th>Phone Number</th>
