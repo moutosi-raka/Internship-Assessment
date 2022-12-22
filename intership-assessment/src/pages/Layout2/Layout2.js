@@ -16,7 +16,7 @@ const Layout2 = () => {
       <tr>
         <th>Id</th>
         <th>Name</th>
-        <th>BOD</th>
+        <th>DOB</th>
         <th>Email</th>
         <th>Phone Number</th>
       </tr>
