@@ -15,7 +15,7 @@
         "id": 3,
         "lable": "Email :",
         "name": "email",
-        "tpye": "text"
+        "tpye": "email"
     },
     {
         "id": 4,
