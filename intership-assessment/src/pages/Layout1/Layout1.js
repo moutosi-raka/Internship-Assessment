@@ -33,7 +33,7 @@ const navigate = useNavigate();
   }
   
   console.log(userInfo)
-  fetch('http://localhost:5000/users-info',{
+  fetch('https://internship-assessment-server-moutosi-raka.vercel.app/users-info',{
     method: 'POST',
     headers:{
         'content-type' : 'application/json'
@@ -54,7 +54,7 @@ const navigate = useNavigate();
  }
 
     return (
-        <div className='w-10/12 mx-auto mt-12 h-[74vh]'>
+        <div className='w-10/12 mx-auto mt-12 h-[78vh]'>
            <form onSubmit={handleForm} className='w-3/2'>
                 {
                     fieldInfo.map(info => 
@@ -66,7 +66,7 @@ const navigate = useNavigate();
                 }
                 <div className='w-[90%] lg:w-[65%] flex 
                 md:justify-center lg:justify-end'>
-                <button className='bg-[#5DADF7] px-5 py-1'>Submit</button>
+                <button className='bg-[#5DADF7] px-5 py-1 font-[17px]'>Submit</button>
                 </div>
            </form>
         </div>

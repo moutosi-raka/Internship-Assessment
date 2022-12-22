@@ -26,7 +26,7 @@ async function run(){
 
    app.get('/users', async(req, res)=>{
     const query = {};
-    const cursor = usersCollection.find(query);
+    const cursor = usersCollection.find(query).sort({"_id" :-1});
     const users =  await cursor.toArray();
     res.send(users)
    })

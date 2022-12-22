@@ -4,7 +4,7 @@ import './Layout2.css'
 const Layout2 = () => {
   const [users, setUsers] = useState([]);
   useEffect( ()=>{
-    fetch('http://localhost:5000/users')
+    fetch('https://internship-assessment-server-moutosi-raka.vercel.app/users')
     .then(res => res.json())
     .then(data => setUsers(data))
   },[])
